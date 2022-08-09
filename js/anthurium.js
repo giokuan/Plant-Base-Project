@@ -256,8 +256,6 @@
 	
 					cartPlantPrice.innerHTML = `${price.innerHTML}`;
 	
-					
-			
 	
 					const iconDelete = document.createElement('p');
 					iconDelete.classList.add('iconDelete')
@@ -276,6 +274,7 @@
 						subCardDiv.remove(cartPlantName);
 						subCardDiv.remove(cartPlantPrice);
 						subCardDiv.remove(iconDelete);
+						
 					})
 	
 				
