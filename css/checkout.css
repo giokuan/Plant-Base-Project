@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar section */
+.nav-container {
+  margin: 0 2rem;
+}
+#logo {
+  max-width: 8rem;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-icon i {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  opacity: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.nav-link-container {
+  display: flex;
+  padding-left: 0;
+}
+
+.nav-link-container li,
+.nav-sign-in li,
+.footer-content-container ul li {
+  list-style-type: none;
+}
+
+.nav-link-container .nav-link-items a,
+.nav-sign-in li a,
+.useful-links-col li a,
+.footer-social-media-icons span a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+.nav-link-container .nav-link-items a {
+  padding: 0 1.5rem;
+}
+
+.hamburger-toggle {
+  display: none;
+}
+
+.nav-sign-in {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-sign-in span {
+  display: inline-block;
+  margin: 0 1.5rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid #000;
+  opacity: 50%;
+}
+
+.shop-items {
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 20vw;
+}
+
+.shop-items span {
+  display: block;
+}
+
+.shop-items span a {
+  opacity: 0.5;
+  transition: cubic-bezier(1, 0, 0, 1) 0.3s;
+}
+
+.shop-items span a:hover,
+.shop-items span a:focus,
+.shop-items span a:active {
+  color: #32502e;
+  opacity: 1;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  margin-left: 2rem;
+}
+
+.breadcrumbs a {
+  color: #32502e;
+  text-decoration: none;
+}
+
+h5 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #32502e;
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #32502e;
+}
+.about-us-text p {
+  margin: 2rem 0;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+/* checkout container */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.delivery-method-container,
+.my-order-container,
+.payment-cash-on-delivery {
+  border: 1px solid #32502e;
+  padding: 2rem;
+}
+
+.checkout-container-left {
+  margin-left: 2rem;
+}
+
+.checkout-container-right {
+  margin-right: 2rem;
+}
+
+.checkout-container-right ul {
+  margin-bottom: 0;
+}
+
+.name-details {
+  display: flex;
+  gap: 1rem;
+}
+
+input[type="radio"] {
+  accent-color: #32502e;
+}
+
+#checkbox :checked {
+  background-color: #32502e;
+}
+
+.shipping-address-input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #32502e;
+}
+
+.shipping-address-input:focus {
+  outline: none;
+  border: 1px solid #32502e;
+  border-radius: 0.5rem;
+}
+
+.my-order-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.my-order-container ul li {
+  list-style-type: none;
+}
+
+.cash-on-delivery-container {
+  margin-top: 1rem;
+}
+
+.cash-on-delivery-form,
+.payment-options-methods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pay-when-received {
+  opacity: 0.8;
+  color: #212121;
+  font-size: 0.9rem;
+  margin: 1rem 0 0;
+}
+
+.payment-logos img {
+  width: 6rem;
+}
+
+.btn-place-order {
+  border: transparent;
+  width: 100%;
+}
+/* plant identifier section */
+.plant-identifier {
+  position: relative;
+  height: 50vh;
+}
+
+.plant-identifier-wrapper {
+  margin: 10rem auto 0;
+  text-align: center;
+  width: 50vw;
+}
+
+.plant-identifier-title {
+  color: #32502e;
+}
+
+.link-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #32502e;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.link-button:hover {
+  color: #32502e;
+  background-color: #fff;
+  border: 1px solid #32502e;
+}
+
+.plant-identifier img {
+  position: absolute;
+}
+
+.plant-identifier img[src="./images/leaf.svg"] {
+  top: -20%;
+}
+
+.plant-identifier img[src="./images/leaf-2.svg"] {
+  right: 0;
+  top: 10%;
+  width: 15%;
+}
+
+/* shop by category section */
+.shop-by-category {
+  margin-top: 10rem;
+}
+
+.shop-category-label {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+.sub-title {
+  color: #32502e;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.show-all-category {
+  text-decoration: none;
+  color: #32502e;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.show-all-category:hover {
+  opacity: 50%;
+}
+
+.shop-category-items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 0 2rem;
+}
+
+.shop-category-items {
+  width: 100%;
+  height: 20rem;
+  background-image: url("https://images.unsplash.com/photo-1509069575671-3df40ce5307c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shop-category-items .category-label {
+  text-transform: capitalize;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: auto;
+  height: 100%;
+  background-color: transparent;
+  color: transparent;
+  font-weight: bold;
+  padding-top: 4rem;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.shop-category-items .category-label:active,
+.shop-category-items .category-label:hover,
+.shop-category-items .category-label:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* blogs section */
+.blogs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+  margin: 0 2rem;
+}
+
+.blogs-container .blogs-items img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.blogs-container .blogs-items .blogs-links {
+  text-decoration: none;
+  color: #32502e;
+}
+
+.blog-date {
+  color: #32502e;
+}
+
+/* footer */
+.newsletter {
+  background-color: #ece7b4;
+  color: #32502e;
+  margin-top: 10rem;
+}
+
+.newsletter-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsletter-title {
+  font-weight: bold;
+}
+
+.newsletter form {
+  width: 50%;
+}
+
+.newsletter-btn {
+  border: 1px solid #32502e;
+  width: 10rem;
+  display: block;
+}
+
+.newsletter-input {
+  border: 1px solid #32502e;
+  padding: 0.8rem 1rem;
+  width: 70%;
+}
+
+/* footer section */
+footer {
+  background-color: #f3efcc;
+}
+
+.footer-container {
+  padding: 2rem;
+}
+
+.footer-content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-logo-container {
+  margin-bottom: 1rem;
+}
+.footer-content-label {
+  color: #32502e;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-social-media-icons {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.footer-social-media-icons span i {
+  font-size: 2.5rem;
+  transition: 0.3s;
+}
+
+.useful-links-col li a:hover,
+.useful-links-col li a:focus,
+.useful-links-col li a:active,
+.footer-social-media-icons span i:hover,
+.footer-social-media-icons span i:focus,
+.footer-social-media-icons span i:active {
+  color: #32502e;
+}
+
+.social-media-col .accredited-payments .footer-content-label {
+  margin: 2rem 0 1rem;
+}
+
+.social-media-col .accredited-payments img {
+  display: inline-block;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.copyright {
+  opacity: 0.8;
+  color: #212121;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* mobile view */
+
+@media (max-width: 800px) {
+  /* navbar section mobile */
+  .hamburger-toggle {
+    border: none;
+    background-color: transparent;
+    display: block;
+  }
+
+  .hamburger-toggle span i {
+    font-size: 2rem;
+  }
+
+  .nav-link-container,
+  .nav-sign-in {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .nav-sign-in span {
+    display: none;
+  }
+
+  .nav-sign-in {
+    padding: 0;
+  }
+
+  .nav-link-container .nav-link-items a,
+  .nav-sign-in li a,
+  form {
+    margin: 0.5rem 0;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
+
+  /* checkout section */
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  div.checkout-container-left {
+    margin-left: 0;
+    margin: 0 2rem;
+  }
+
+  div.checkout-container-right {
+    margin-right: 0;
+    margin: 0 2rem;
+  }
+
+  .payment-logos img.container-fluid {
+    width: 3rem;
+  }
+
+  #pay-when-received {
+    margin: 0;
+  }
+
+  /* about us section mobile */
+  div.about-us-wrapper,
+  div.service-features {
+    grid-template-columns: 1fr;
+    margin: 4rem 2rem;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  div.about-us-text {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .about-us-image img {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  /* service features mobile*/
+  /* plant identifier section mobile*/
+  div.plant-identifier-wrapper {
+    margin: 4rem 2rem;
+    text-align: center;
+    width: 90%;
+  }
+
+  .plant-identifier-title {
+    padding-top: 5rem;
+  }
+
+  .plant-identifier img[src="./images/leaf.svg"] {
+    top: -20%;
+    width: 6rem;
+  }
+
+  .plant-identifier img[src="./images/leaf-2.svg"] {
+    right: 0;
+    top: unset;
+    bottom: -40%;
+    width: 15%;
+  }
+
+  /* shop category section mobile*/
+  .shop-category-label {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 2rem;
+  }
+
+  .shop-category-items-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .show-all-category {
+    margin-bottom: 2rem;
+  }
+
+  /* blogs section mobile */
+
+  .blogs-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin: 0 2rem;
+  }
+
+  /* footer section mobile */
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-container form {
+    width: 100%;
+  }
+
+  .newsletter-container .newsletter-input,
+  .newsletter-container .newsletter-btn {
+    width: 100%;
+  }
+
+  .footer-content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-us-col,
+  .social-media-col {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  div.footer-social-media-icons {
+    margin: 0 auto;
+  }
+
+  div.accredited-payments-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .social-media-col .accredited-payments img {
+    margin: 0;
+  }
+
+  p.footer-content-label {
+    text-align: center;
+  }
+}

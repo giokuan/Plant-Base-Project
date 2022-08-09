@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <title>Aglaonema Category</title>
+</head>
+<body onload="myFunction()" style="margin:0;">
+    <!-- navbar starts here -->
+    <nav class="navbar fixed-top navbar-expand-lg py-4">
+      <div class="nav-container container-fluid p-0">
+        <a class="navbar-brand" href="./index.html"
+          ><img id="logo" src="./images/plantbase-logo.svg" alt=""
+        /></a>
+        <button
+          class="hamburger-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav-link-container mx-auto mb-2 mb-lg-0">
+            <li class="nav-link-items">
+              <a aria-current="page" href="./index.html">Homepage</a>
+            </li>
+            <li class="dropdown nav-link-items">
+              <a
+                class="dropdown-toggle"
+                href="./allplants.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Shop
+              </a>
+              <div class="shop-items dropdown-menu">
+                <span><a href="allplants.html">All Plants</a></span>
+                <span><hr class="dropdown-divider" /></span>
+                <span>
+                  <a href="hangingplant.html">Hanging</a>
+                </span>
+                <span><a href="fern.html">Fern</a></span>
+                <span><a href="bromeliad.html">Bromeliad</a></span>
+                <span>
+                  <a href="cactus.html">Cactus & Succulent</a>
+                </span>
+                <span><a href="aglaonema.html">Aglaonema</a></span>
+                <span><hr class="dropdown-divider" /></span>
+                <span><a href="other.html">Other</a></span>
+                <span><a href="flower.html">Flower</a></span>
+                <span><a href="foliage.html">Foliage plant</a></span>
+                <span><a href="anthurium.html">Anthurium</a></span>
+                <span><a href="palm.html">Palm</a></span>
+                <span><hr class="dropdown-divider" /></span>
+                <span><a href="dieffenbachia.html">Dieffenbachia</a></span>
+                <span>
+                  <a href="dracaena.html">Dracaena</a>
+                </span>
+                <span>
+                  <a href="ficus.html">Ficus</a>
+                </span>
+                <span>
+                  <a href="aralia.html">Aralia</a>
+                </span>
+                <span>
+                  <a href="philodendron.html">Philodendron</a>
+                </span>
+                <span><hr class="dropdown-divider" /></span>
+                <span>
+                  <a href="grass.html">Grass</a>
+                </span>
+                <span>
+                  <a href="topiairy.html">Topiairy</a>
+                </span>
+                <span>
+                  <a href="sansevieria.html">Sansevieria</a>
+                </span>
+                <span>
+                  <a href="spathiphyllum.html">Spathiphyllum</a>
+                </span>
+                <span>
+                  <a href="schefflera.html">Schefflera</a>
+                </span>
+              </div>
+            </li>
+            <li class="nav-link-items">
+              <a href="#">Blogs</a>
+            </li>
+            <li class="nav-link-items">
+              <a href="#">FAQs</a>
+            </li>
+            <li class="nav-link-items">
+              <a href="identifier.html">Plant Identifier</a>
+            </li>
+            <li class="nav-link-items">
+              <a href="#">Contact Us</a>
+            </li>
+
+            <i class="bi bi-cart fa-lg cartIconNav" data-bs-target="#cartModal" data-bs-toggle="modal" type="button"></i>
+          </ul>
+          <form class="search-form d-flex" role="search">
+            <input
+              class="search-input me-2"
+              type="search"
+              placeholder="Search"
+            />
+            <span class="search-icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+          </form>
+          <ul class="nav-sign-in mb-2 mb-lg-0">
+            <li>
+              <a href="#">Login</a>
+            </li>
+            <span>/</span>
+            <li>
+              <a href="#">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+      <h1> Aglaonema Plants Categroy</h1>
+
+     
+      
+   
+
+    
+
+     <!------------------------ BACK TO TOP BUTTON ----------------->
+    <!-- <button onclick="topFunction()" id="myBtn" class="back-to-top"><i class="bi bi-arrow-up-circle"></i></button>  -->
+    <i onclick="topFunction()" id="myBtn" class="bi bi-arrow-up-circle-fill back-to-top fa-3x"></i>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Plant Base</h5>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+            <!-- <button type="button" class="btn btn-danger">Buy this Plant</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal Cart-->
+     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Plant Base</h5>
+          
+          </div>
+          <div class="modal-body-cart">
+
+             <!-- checkout main content -->
+
+                <h5 class="fs-2">YOUR CART</h5>
+                <div class="checkout-container">
+                  <div class="checkout-container-left">
+                    <p class="form-label">ITEM SUMMARY</p>
+                    <div class="delivery-method-container">
+                      <form class="delivery-method-options">
+                        <!-- <input type="checkbox" name="plant-item" />
+                        <label for="">All</label> -->
+                        
+                        <div class="plant-item-details">
+                      
+                        </div>
+                  
+                    <div class="btn-container">
+                      <a class="link-button btn-place-order" href="./allplants.html">CONTINUE SHOPPING</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="checkout-container-right">
+                <p class="form-label">CARD TOTALS</p>
+                <div class="card-subtotals-container">
+                  <div class="card-subtotals">
+                    <span>Subtotals</span>
+                    <span  id = 'subTotalPrice'></span>
+                  </div>
+                  <div class="card-subtotals mt-2">
+                    <span>Shipping Fee</span>
+                    <span class="shippingFee" value = 200>200</span>
+                  </div>
+                  <div class="mt-3">
+                    <input
+                      class="voucher-input"
+                      type="text"
+                      placeholder="Enter voucher"
+                    />
+                    <button class="voucher-btn" type="submit">APPLY</button>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="card-subtotals mt-2">
+                    <span class="card-total-label">Total Fee</span>
+                    <span  class="card-total"></span>
+                  </div>
+                </div>
+                <button class="link-button btn-proceed-checkout">PROCEED TO CHECKOUT</button>
+              </div>
+            </div>
+                  
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+           <button type="button" class="btn btn-danger">Proceed to Checkout</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+      <!-- GITFOR LOADING ANIMATION -->
+      <div id="loader"></div>
+      <div style="display:none;" id="myDiv" class="animate-bottom"></div>
+        
+
+
+     <!-- DON'T DELETE THIS CONTAINER -->
+     <div class="main-container"></div>
+
+    <!-- newsletter section -->
+  <div class="newsletter">
+    <div class="newsletter-container">
+      <div class="get-the-dirt-section">
+        <p class="newsletter-title fs-2">Get The Dirt!</p>
+        <p>Sign up and be the first to know of our newest collections.</p>
+      </div>
+      <form action="#" id="newsletter">
+        <input
+          class="newsletter-input"
+          for="newsletter"
+          type="email"
+          placeholder="Enter Your Email"
+        />
+        <button class="newsletter-btn link-button" type="submit">
+          SIGN UP
+        </button>
+      </form>
+    </div>
+  </div>
+
+ <footer>
+  <div class="footer-container">
+    <div class="footer-logo-container">
+      <a href="#"
+        ><img id="logo" src="./images/plantbase-logo.svg" alt=""
+      /></a>
+    </div>
+    <div class="footer-content-container">
+      <div class="about-us-col">
+        <p class="about-us-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="address-telephone-col">
+        <ul>
+          <li class="footer-content-label">ADDRESS:</li>
+          <li>ABC St, Brgy. Kamote,</li>
+          <li>Surigao City</li>
+          <li>Philippines 8400</li>
+        </ul>
+        <ul>
+          <li class="footer-content-label">TELEPHONE:</li>
+          <li>0912-345-6789</li>
+        </ul>
+      </div>
+      <div class="useful-links-col">
+        <ul>
+          <li class="footer-content-label">USEFUL LINKS</li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">Checkout</a></li>
+        </ul>
+      </div>
+      <div class="social-media-col">
+        <p class="footer-content-label">SOCIAL MEDIA LINKS</p>
+        <div class="footer-social-media-icons">
+          <span
+            ><a href="#"><i class="fa-brands fa-facebook"></i></a
+          ></span>
+          <span
+            ><a href="#"><i class="fa-brands fa-instagram"></i></a
+          ></span>
+          <span
+            ><a href="#"><i class="fa-brands fa-twitter"></i></a
+          ></span>
+          <span
+            ><a href="#"><i class="fa-brands fa-pinterest"></i></a
+          ></span>
+        </div>
+        <div class="accredited-payments">
+          <p class="footer-content-label">ACCREDITED PAYMENT OPTIONS</p>
+          <div class="accredited-payments-logo">
+            <img src="./images/GCah_2019.webp" alt="" />
+            <img src="./images/mastercard.png" alt="" />
+            <img src="./images/visa.png" alt="" />
+            <img
+              src="./images/COD_cash_on_delivery_shipping_payment_delivery-512.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="copyright">Copyright &copy; 2022 | All Rights Reserved</p>
+</footer>
+
+
+    <script src="/js/aglaonema.js"></script>
+    <!-- <script src="plants.js"></script> -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 1000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
+    
+</body>
+</html>
