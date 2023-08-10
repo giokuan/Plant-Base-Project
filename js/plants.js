@@ -32,6 +32,7 @@
 			   
 			  })
 
+			  console.log(allData)
 			 
 			  const origin = res.map((showAll)=>{
 				return showAll.origin;
@@ -99,7 +100,7 @@
 				const subContainer = document.createElement('div');
 				subContainer.classList.add('subContainer');
 
-				// console.log(dataAll);
+				console.log(dataAll);
 				// console.log(categories);
 
 
@@ -109,11 +110,6 @@
 				subContainer.append(newParagraph);
 				newMainContainer.append(subContainer);
 
-				// document.addEventListener("click", function(){
-					
-				//   });
-
-				
 				
 				let iconP = document.createElement('p');
 				iconP.classList.add('iconP')
@@ -126,14 +122,17 @@
 				
 				const newDiv = document.createElement('div');
 				newDiv.classList.add('priceAndFavoriteDiv');
+				const pesoSign = document.createElement('p');
+				pesoSign.classList.add('pesoSign')
+				pesoSign.innerHTML = '₱'
 				const price = document.createElement('p');
 				price.classList.add('price');
 				let val = getRandomInt(100, 300);
-				
 				price.innerHTML = (val);
-
 				price.setAttribute('value', val)
+				newDiv.append(pesoSign);
 				newDiv.append(price);
+	
 			
 				
 				const iconHeart = document.createElement('p');
@@ -141,9 +140,6 @@
 				iconHeart.innerHTML = '<i class="bi bi-heart fa-2x"></i>';
 				newDiv.append(iconHeart);
 
-
-
-			
 
 				const cardPlant = document.createElement('div');
 				cardPlant.classList.add('card');
@@ -161,18 +157,12 @@
 				const fig = document.createElement('figure');
 				fig.append(newImg);
 
-				// console.log(newImg)
-
-
 
 				cardPlant.append(fig);
 				cardPlant.append(subContainer);
 				cardPlant.append(newDiv);
 				newMainContainer.append(cardPlant);
 
-
-				
-			
 
 				newImg.addEventListener('click', e =>{
 					
@@ -233,16 +223,7 @@
 					
 
 					 wrap.append(detailsDiv);
-					//  console.log(wrap)
-
 					
-
-					//  let clonedwrap = wrap.cloneNode(true);
-					// clonedwrap.classList= 'clone'
-
-					
-					// cloneDiv.append(clonedwrap);
-					// console.log(clonedwrap)
 
 					modal.append(wrap);
 
@@ -251,7 +232,33 @@
 					buyThisPlantButton.addEventListener('click', () =>{
 						
 						addToCart()
-						// console.log(clone)
+						const cartPlantPrice = document.querySelectorAll('.cartPlantPrice');
+						let subTotal = document.querySelector('#subTotalPrice');
+						const shippingFee = document.querySelector('.shippingFee');
+						const totalAll = document.querySelector('.card-total');
+
+						let sum = 0;
+					
+						for (let i =0; i< cartPlantPrice.length;i++){
+						sum += parseInt(cartPlantPrice[i].innerHTML)
+					
+						subTotal.innerHTML = sum
+
+						totalAll.innerHTML = sum + parseInt(shippingFee.innerHTML)
+
+						}
+
+						// ############### copy the total price from cart to checkout
+						const proceedTocheckoutButton = document.querySelector('.btn-proceed-checkout');
+						proceedTocheckoutButton.addEventListener('click', ()=>{
+							const totalPriceOfPlant = document.querySelector('#totalPriceOfPlant');
+							const grandTotal = document.querySelector('#grandTotal');
+							
+		
+							totalPriceOfPlant.innerHTML = ('₱' + ' ' + parseInt(subTotal.innerHTML));
+							grandTotal.innerHTML = ('₱' + ' ' + parseInt(totalAll.innerHTML));
+						})
+					
 					})
 				
 				
@@ -278,16 +285,30 @@
 					
 		
 					})
-			
+				// -----
 
 			
 					
-			// ----------------ADD TO CART FUNCTION WHEN CLICK--------------------------------------
+			// ----------------ADD TO CART FUNCTION--------------------------------------
 		
 			iconP.addEventListener('click', () =>{
 				
 				addToCart()
+				// getTotal()
+				// console.log(event)
+
+				const cartPlantPrice = document.querySelector('.cartPlantPrice');
+			
+				// let thirdchild = document.querySelector('.subCardDiv').children[2].value ;
+				const subTotal = document.querySelector('#subTotalPrice')
+				
+			
+
+				subTotal.value = parseInt(cartPlantPrice) + parseInt(cartPlantPrice);
+			
 				iconP.style.color = "red";
+
+				
 
 			})
 
@@ -303,11 +324,20 @@
 
 				cartImage.classList.add('cartImage');
 				cartImage.src = newImg.src;
-				cartImage.setAttribute('width', '20%')
+				cartImage.setAttribute('width', '40%')
 
 				const cartPlantName = document.createElement('p');
 				cartPlantName.classList.add('cartPlantName');
-				cartPlantName.append(allData[i]);
+				cartPlantName.append(allData[i].toUpperCase());
+
+				const plantQty = document.createElement('input');
+				plantQty.classList.add('plantQty');
+				plantQty.setAttribute('type', 'number')
+				plantQty.setAttribute('value',"1")
+				plantQty.setAttribute('min', "1")
+				plantQty.setAttribute('max', "10")
+		
+				
 		
 				let cartPlantPrice = document.createElement('p');
 				cartPlantPrice.classList.add('cartPlantPrice');
@@ -321,41 +351,76 @@
 
 				const iconDelete = document.createElement('p');
 				iconDelete.classList.add('iconDelete')
-				iconDelete.innerHTML = '<i class="bi bi-trash"></i>';
+				iconDelete.innerHTML = '<i class="bi bi-trash fa-lg"></i>';
 				
 				
-				// pricing.classList.add('pricing');
-
-				// pricing.append(cartPlantPrice)
 
 				subCardDiv.append(cartImage);
 				subCardDiv.append(cartPlantName);
+				subCardDiv.append(plantQty);
 				subCardDiv.append(cartPlantPrice);
 				subCardDiv.append(iconDelete);
 				plantItems.append(subCardDiv);
-				
 
 				// =========displaying the total price of plants in the cart==============
-				const placeOrder = document.querySelector('.btn-place-order')
+				const placeOrder = document.querySelector('.cartIconNav')
 				placeOrder.addEventListener('click', ()=>{
-
+					
 				const cartPlantPrice = document.querySelectorAll('.cartPlantPrice');
 				let subTotal = document.querySelector('#subTotalPrice');
 				const shippingFee = document.querySelector('.shippingFee');
 				const totalAll = document.querySelector('.card-total');
+				const plantQty = document.querySelector('.plantQty');
 
+		
+			
+			
+			
+					
+					let a = parseInt(cartPlantPrice.innerHTML) * parseInt(plantQty.value)
+					// console.log(a)
 				let sum = 0;
+				
+				
 			
 				for (let i =0; i< cartPlantPrice.length;i++){
-					  sum += parseInt(cartPlantPrice[i].innerHTML)
-				
-				subTotal.innerHTML = sum
 
-				totalAll.innerHTML = sum + parseInt(shippingFee.innerHTML)
+					// let s = parseInt(cartPlantPrice[i].innerHTML) *
+
+					sum += parseInt(cartPlantPrice[i].innerHTML)
+					subTotal.innerHTML = sum
+					totalAll.innerHTML = sum + parseInt(shippingFee.innerHTML)
+
+					
 
 				}
 
+				
+			
+				// ############### copy the total price from cart to checkout 
+				const proceedTocheckoutButton = document.querySelector('.btn-proceed-checkout');
+				proceedTocheckoutButton.addEventListener('click', ()=>{
+				
+					const cartPlantName = document.querySelector('.cartPlantName');
+
+			
+
+					const totalPriceOfPlant = document.querySelector('#totalPriceOfPlant');
+					const grandTotal = document.querySelector('#grandTotal');
+					
+
+					totalPriceOfPlant.innerHTML = ('₱' + ' ' + parseInt(subTotal.innerHTML));
+					grandTotal.innerHTML = ('₱' + ' ' + parseInt(totalAll.innerHTML));
+
 				})
+
+			
+				
+				})
+
+			
+				
+				
 				
 				iconDelete.addEventListener('click', ()=>{
 					subCardDiv.remove(cartImage);
@@ -363,34 +428,53 @@
 					subCardDiv.remove(cartPlantPrice);
 					subCardDiv.remove(iconDelete);
 
-					
 					let subTotal = document.querySelector('#subTotalPrice');
 					const shippingFee = document.querySelector('.shippingFee');
 					const totalAll = document.querySelector('.card-total');
 
 					let sum = parseInt(subTotal.innerHTML);
 			
-				console.log(sum)
+				// console.log(sum)
 				 total = sum - parseInt(cartPlantPrice.innerHTML)
 				
 				subTotal.innerHTML = total
 
 				totalAll.innerHTML = total + parseInt(shippingFee.innerHTML)
 
+				if (subTotal.innerHTML === "0"){
+					document.querySelector('.btn-proceed-checkout').disabled = true;
+					document.querySelector('.btn-proceed-checkout').style.backgroundColor = "grey"
+				}
 				
 				})
+
 			
-			
-			} // fuction add to cart closing
+			}
 			
 
-			   }    // for loop closing
-
+			  }
 
 			})
 			.catch(err => console.error(err));
 
 
+			
+			// function disabledBtn(){
+			
+			// 		const cartPlantName = document.querySelector('.cartPlantName');
+
+			// 		if (cartPlantName.innerHTML === ' '){
+			// 			document.querySelector('.btn-proceed-checkout').disabled = true;
+			// 			alert('No items in the cart ');
+			// 		}else{
+			// 			document.querySelector('.btn-proceed-checkout').disabled = false;
+			// 		}
+				
+				
+					
+				
+			// }
+			
 
 			
 		
@@ -431,3 +515,168 @@
 			  }
 
 	//  ******************** BACK TO TOP ARROW ********************************
+
+	
+
+// 	function validate(){
+
+	
+// 	const lname = document.querySelector('#lastname').value;
+// 	const fname = document.querySelector('#firstname').value;
+// 	const mname = document.querySelector('#middlename').value;
+// 	const email = document.querySelector('#email').value;
+// 	const mobile = document.querySelector('#mobile').value;
+// 	const address = document.querySelector('#address').value;
+
+// 	if (lname.value === " " || lname.value == null){
+// 		document.querySelector('#placeOrder').disabled = true;
+// 	} else if(fname.value === " " || fname.value == null){
+// 		document.querySelector('#placeOrder').disabled = true;
+// 	}else if(mname.value === " " || mname.value == null){
+// 		document.querySelector('#placeOrder').disabled = true;
+// 	}else if(email.value === " " || email.value == null){
+// 		document.querySelector('#placeOrder').disabled = true;
+// 	}else if(mobile.value === " " || mobile.value == null){
+// 		document.querySelector('#placeOrder').disabled = true;
+// 	}else if(address.value === " " || address.value == null){
+// 		document.querySelector('#placeOrder').disabled = true;
+// 	}else{
+// 		document.querySelector('#placeOrder').disabled = false;
+// 	}
+
+// }
+	
+// 	const btnPlaceOrder = document.querySelector('#placeOrder')
+// 	btnPlaceOrder.setAttribute('data-bs-toggle', 'modal')
+// 	btnPlaceOrder.setAttribute('data-bs-target', '#placeOrderModal')
+
+// 	btnPlaceOrder.addEventListener('click', (e)=>{
+	
+// 		const lname = document.querySelector('#lastname').value
+// 		const fname = document.querySelector('#firstname').value
+// 		const mname = document.querySelector('#middlename').value
+// 		const email = document.querySelector('#email').value
+// 		const mobile = document.querySelector('#mobile').value
+// 		const address = document.querySelector('#address').value
+// 		const cardTotal = document.querySelector('.card-total')
+// 		const pickUp = document.querySelector('#pickup')
+// 		const doorToDoor = document.querySelector('#doorToDoor')
+
+
+// 		const payname = document.querySelector('#payname');
+// 		const payemail = document.querySelector('#payemail');
+// 		const paymobile = document.querySelector('#paymobile');
+// 		const payaddress = document.querySelector('#payaddress');
+// 		const amount = document.querySelector('#amount');
+// 		const delivery = document.querySelector('#delivery');
+
+// 		if (pickUp.checked){
+// 			delivery.innerHTML = pickUp.value
+
+// 		}else{
+// 			delivery.innerHTML = doorToDoor.value
+// 		}
+
+		
+// 		payname.innerHTML = (`${fname}  ${mname}  ${lname}`);
+// 		payemail.innerHTML = email;
+// 		paymobile.innerHTML = mobile;
+// 		payaddress.innerHTML = address;
+// 		amount.value = parseInt(cardTotal.innerHTML)
+
+// 	})
+
+	// data-bs-target="#placeOrderModal" data-bs-toggle="modal" data-bs-dismiss="modal"
+// ############################## PAYPAL PAYMENT ################################################################
+
+const amountElement = document.querySelector('#amount')
+paypal_sdk.Buttons({
+        // Sets up the transaction when a payment button is clicked
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: amountElement.value // Can also reference a variable or function
+              }
+            }]
+          });
+        },
+        // Finalize the transaction after payer approval
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(function(orderData) {
+            // Successful capture! For dev/demo purposes:
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+            const transaction = orderData.purchase_units[0].payments.captures[0];
+		
+            // alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+            // When ready to go live, remove the alert and show a success message within this page. For example:
+            // const element = document.getElementById('paypal');
+            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+         	actions.redirect("http://127.0.0.1:5501/thankyou.html");
+          });
+        }
+      }).render('#paypal');
+	
+
+	 const formSubmit = document.querySelector('#formSubmit');
+	 formSubmit.addEventListener('submit', (e)=>{
+		e.preventDefault();
+		const lname = document.querySelector('#lastname').value
+		const fname = document.querySelector('#firstname').value
+		const mname = document.querySelector('#middlename').value
+		const email = document.querySelector('#email').value
+		const mobile = document.querySelector('#mobile').value
+		const address = document.querySelector('#address').value
+		const cardTotal = document.querySelector('.card-total')
+		const pickUp = document.querySelector('#pickup')
+		const doorToDoor = document.querySelector('#doorToDoor')
+
+
+		const payname = document.querySelector('#payname');
+		const payemail = document.querySelector('#payemail');
+		const paymobile = document.querySelector('#paymobile');
+		const payaddress = document.querySelector('#payaddress');
+		const amount = document.querySelector('#amount');
+		const delivery = document.querySelector('#delivery');
+
+		if (pickUp.checked){
+			delivery.innerHTML = pickUp.value
+
+		}else{
+			delivery.innerHTML = doorToDoor.value
+		}
+
+		
+		payname.innerHTML = (`${fname}  ${mname}  ${lname}`);
+		payemail.innerHTML = email;
+		paymobile.innerHTML = mobile;
+		payaddress.innerHTML = address;
+		amount.value = parseInt(cardTotal.innerHTML)
+
+		formSubmit.setAttribute('data-bs-toggle', 'modal')
+		formSubmit.setAttribute('data-bs-target', '#placeOrderModal')
+		formSubmit.setAttribute('data-bs-dismiss', 'modal')
+	 })
+
+
+	 const btnPrime = document.querySelector('.btn-prime')
+	 btnPrime.addEventListener('click', ()=>{
+		const formSubmit = document.querySelector('#formSubmit');
+		formSubmit.removeAttribute('data-bs-toggle')
+		formSubmit.removeAttribute('data-bs-target')
+		formSubmit.removeAttribute('data-bs-dismiss')
+		
+
+	 })
+
+	 function btnDisabled(){
+
+		let subTotal = document.querySelector('#subTotalPrice');
+		if (!subTotal){
+			document.querySelector('.btn-proceed-checkout').disabled = true;
+		}
+
+		console.log(subTotal.innerHTML)
+	 }
+
+	console.log(btnDisabled())

@@ -2,13 +2,11 @@
 
 * {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
 
 /* navbar section */
 .nav-container {
@@ -22,8 +20,8 @@
   padding-left: 3rem;
 } */
 
-.cartIconNav{
- padding-left:3rem;
+.cartIconNav {
+  padding-left: 3rem;
 }
 
 .search-form {
@@ -53,7 +51,7 @@
 .nav-link-container .nav-link-items a,
 .nav-sign-in li a,
 .useful-links-col li a,
-.footer-social-media-icons span a {
+.footer-social-media-icons  a {
   display: inline-block;
   text-decoration: none;
   color: #000;
@@ -88,7 +86,7 @@
 .shop-items {
   padding: 1rem;
   margin-top: 2rem;
-  width: 20vw;
+  width: 30vw;
 }
 
 .shop-items span {
@@ -96,20 +94,21 @@
 }
 
 .shop-items span a {
-  opacity: 0.5;
   transition: cubic-bezier(1, 0, 0, 1) 0.3s;
+  display: block;
+  width: 100%;
+  margin: 0.3rem 0;
 }
 
 .shop-items span a:hover,
 .shop-items span a:focus,
 .shop-items span a:active {
-  color: #32502e;
-  opacity: 1;
+  background-color: #32502e3c;
 }
 /* carousel section */
 .carousel-inner img {
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -352,7 +351,12 @@ footer {
 .footer-social-media-icons {
   display: flex;
   width: 80%;
-  justify-content: space-between;
+
+  justify-content: start;
+}
+
+.fa-brands{
+  padding-right:2rem;
 }
 
 .footer-social-media-icons span i {
@@ -388,7 +392,7 @@ footer {
   text-align: center;
 }
 
-/* mobile view */
+/*##################### mobile view #############################*/
 
 @media (max-width: 800px) {
   /* navbar section mobile */
@@ -489,6 +493,9 @@ footer {
     margin-bottom: 2rem;
   }
 
+  .shop-category-items {
+    height: 30vh;
+  }
   /* blogs section mobile */
 
   .blogs-container {
@@ -588,7 +595,8 @@ img .card-img-top {
   padding-top: 0.3rem;
   font-size: 1.25rem;
   color: rgb(40, 107, 40);
-  padding-left: 1rem;
+  padding-right: 10.5rem;
+  padding-left:0.25rem;
 }
 
 .commonName {
@@ -598,18 +606,28 @@ img .card-img-top {
 .priceAndFavoriteDiv {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-right: 1rem;
 }
+
+.pesoSign{
+  padding-top: 0.3rem;
+  font-size: 1.25rem;
+  color: rgb(40, 107, 40);
+  padding-left: 1rem;
+
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 0;
+  right: 2rem;
   z-index: 996;
+  font-size: 4rem;
   /* font-size: 2rem;  */
   /* padding:.75rem; */
   /* border: 1px solid rgb(227, 79,38); */
@@ -624,164 +642,151 @@ img .card-img-top {
 }
 /* All Plants CSS c/o Gio  ENDS HERE*/
 
-.identifier .navbar{
-  background-color:#fff;
+.identifier .navbar {
+  background-color: #fff;
 }
 
-.identifier #newsletter{
-  
+.identifier #newsletter {
   display: flex;
   flex-direction: column;
-  
+
   /* margin-left: 6.7rem; */
- 
 }
 
-.identifier .newsletters-btn{
-  width:10rem;
+.identifier .newsletters-btn {
+  width: 10rem;
 }
 
-.identifier .main-container{
-    display:flex;
-    /* flex-direction:column; */
-    align-items: center;
-    justify-content:space-evenly;
-    row-gap: 5rem;
-    column-gap: 2rem; 
-    padding-bottom: 5rem;; 
+.identifier .main-container {
+  display: flex;
+  /* flex-direction:column; */
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 5rem;
+  column-gap: 2rem;
+  padding-bottom: 5rem;
 }
 
 /* .identifier .navbar.navbar-expand{
   padding-bottom:5rem;
 } */
 
-.identifier, h1{
+.identifier,
+h1 {
   text-align: center;
   /* margin-top: 5rem; */
   padding-bottom: 10rem;
 }
 
-.identifier .mainImage{
-  display:flex;
+.identifier .mainImage {
+  display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   margin-top: 2rem;
-  
-
 }
 
-.identifier .image-url{
+.identifier .image-url {
   width: 100%;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-
 }
 
-.identifier .mainCardDiv .card{
-  display:flex;
-  width:10rem;
+.identifier .mainCardDiv .card {
+  display: flex;
+  width: 10rem;
   margin-top: 2rem;
-  background-color:#32502e;
-  border-radius:0.3rem;
-  align-items:center;
+  background-color: #32502e;
+  border-radius: 0.3rem;
+  align-items: center;
   justify-content: center;
 }
 
-
-
-.identifier .localImage{
-  width:100%;
-  background-color:#32502e;
+.identifier .localImage {
+  width: 100%;
+  background-color: #32502e;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-
-.identifier .cardParagraphClass{
+.identifier .cardParagraphClass {
   text-align: center;
-  color:#ece7b4;
+  color: #ece7b4;
   padding-top: 0.5rem;
-
 }
 
-.identifier.card{
-display: flex;
-width:10rem;
-background-color:#32502e;
-border-radius:0.3rem;
-align-items:center;
-justify-content: center;
-margin-top: 3rem;
-
+.identifier.card {
+  display: flex;
+  width: 10rem;
+  background-color: #32502e;
+  border-radius: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
-.identifier .mainPlantDetailsDiv{
-
-display:flex;
-flex-direction: column;
-column-gap: 1rem;
-align-items: flex-start;
-justify-content: center;
-padding-top: 1rem;
-padding-left: 3rem;
-
+.identifier .mainPlantDetailsDiv {
+  display: flex;
+  flex-direction: column;
+  column-gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-left: 3rem;
 }
 
-.identifier.divForm{
+.identifier.divForm {
   /* padding-top:5rem; */
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
-.identifier #search-btn{
-background-color:#32502e;
-color:#fff;
-border-radius:0.3rem;
-width:7.5rem;
-height:2rem;
-
+.identifier #search-btn {
+  background-color: #32502e;
+  color: #fff;
+  border-radius: 0.3rem;
+  width: 7.5rem;
+  height: 2rem;
 }
 
-.identifier, #search-btn:hover{
-background-color:#fff;
-color:black;
-
+.identifier,
+#search-btn:hover {
+  background-color: #fff;
+  color: black;
 }
 
-
-.identifier, input[type=file]::file-selector-button{
-background-color:#32502e;
-border-radius:0.3rem;
-color:#fff;
+.identifier,
+input[type="file"]::file-selector-button {
+  background-color: #32502e;
+  border-radius: 0.3rem;
+  color: #fff;
 }
 
-.identifier .reload{
-  background-color:#32502e;
-  border-radius:0.3rem;
-  color:#fff;
-  width:7.5rem;
-  height:2rem;
-  margin-left: 0.50rem;
+.identifier .reload {
+  background-color: #32502e;
+  border-radius: 0.3rem;
+  color: #fff;
+  width: 7.5rem;
+  height: 2rem;
+  margin-left: 0.5rem;
 }
 
-.identifier .reload:hover{
-  background-color:#fff;
- 
-  color:black;
+.identifier .reload:hover {
+  background-color: #fff;
+
+  color: black;
 }
 
-.identifier .wrapper-wrapper{
-  display:flex;
+.identifier .wrapper-wrapper {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
-.identifier, input[type=file]::file-selector-button:hover{
-background-color:#fff;
-color:black;
+.identifier,
+input[type="file"]::file-selector-button:hover {
+  background-color: #fff;
+  color: black;
 }
 
 /* h1{
@@ -789,37 +794,34 @@ color:black;
   padding-bottom: 6rem;
 } */
 
-
 /* HOVER EFFECTS OF IMAGE */
 .card figure {
-	background: #01271f;
+  background: #01271f;
 }
 .card figure img {
-	opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .card figure:hover img {
-	opacity: .5;
+  opacity: 0.5;
 }
 
 /* All Plants CSS c/o Gio  ENDS HERE*/
 
-
 /* MODAL STYLE FOR SPECIFIC PLANT WHEN CLICK */
-.wrap{
-  display:flex;
-  gap:2rem;
+.wrap {
+  display: flex;
+  gap: 2rem;
   align-items: center;
-  justify-content:center;
- 
+  justify-content: center;
 }
 
-.modal{
+.modal {
   pointer-events: none;
 }
 
-.modal-dialog{
+.modal-dialog {
   pointer-events: all;
 }
 
@@ -840,13 +842,21 @@ color:black;
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Add animation to "page content" */
@@ -855,17 +865,29 @@ color:black;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
-  animation-duration: 1s
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
 }
 
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
 }
 
 #myDiv {
@@ -873,44 +895,82 @@ color:black;
   text-align: center;
 }
 
-H1{
+H1 {
   padding-top: 10rem;
 }
 
-.detailsDiv p{
+.detailsDiv p {
   font-size: 1.25rem;
 }
 
-.commonName{
+.commonName {
   font-weight: bold;
-  color:#056e24;
+  color: #056e24;
   font-size: 1.08rem;
   /* line-height: 1.5rem; */
 }
 
-
 /*-------------------- ADD TO CART  modal---------------------*/
-.plant-item-details{
-  display:flex;
-  flex-direction:column;
+.plant-item-details {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  
 }
 
 
-.delivery-method-container,
-.my-order-container,
-.payment-cash-on-delivery,
+.delivery-method-container{
+  padding: 2rem;
+  width: 100%;
+}
+
+.my-order-container{
+  padding: 2rem;
+  width: 100%;
+}
+.payment-cash-on-delivery{
+  padding: 2rem;
+  width: 100%;
+}
 .card-subtotals-container {
-  border: 1px solid #32502e;
+  /* border: 1px solid #32502e; */
+  width: 100%;
   padding: 2rem;
 }
 
 .card-subtotals {
   display: flex;
   justify-content: space-between;
+  font-size: 1.25rem;
 }
+
+.subtotallabel{
+  font-size: 1rem;
+}
+
+.shippingFeelabel{
+  font-size: 1rem;
+}
+
+.shippingFee{
+  font-size: 1rem;
+}
+
+.card-total-label{
+  font-size: 1rem;
+}
+.card-total{
+  font-size: 1rem;
+}
+
+.btn-place-order{
+  border-radius:0.5rem;
+}
+
+#subTotalPrice{
+  font-size: 1rem;
+}
+
 
 .card-subtotals .card-total {
   font-weight: bold;
@@ -918,52 +978,61 @@ H1{
 
 .subCardDiv{
   display:Grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows:auto;
-  padding-top: 2rem;
+  margin-top: 2rem;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   /* column-gap:5rem; */
+
 
  
 }
 
+.subCardDiv .plantQty{
+  width:30%;
+  display:flex;
+  align-items:center            ;
+  justify-content:center;
+  margin-left: 3rem;
+  font-size: 1rem;
+
+
+}
+
 .cartPlantPrice{
   display:flex;
-  align-items:flex-end;
-  justify-content: flex-end;
+  align-items:center;
+  justify-content: center;
+  font-size: 1rem;
 }
 
-.cartImage{
-  display:flex;
-  align-items:flex-start;
+.cartImage {
+  display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
-  gap:2rem;
+  gap: 2rem;
   /* width:5rem; */
-
 }
 
-.iconDelete{
-  display:flex;
-  align-items:flex-end;
+.iconDelete {
+  display: flex;
+  align-items: flex-end;
   justify-content: flex-end;
-
 }
 
 .cartPlantName{
   display:flex;
   align-items:flex-start;
   justify-content:flex-start;
-  /* font-size: 1rem; */
+  font-size: 1rem;
 }
 
-.checkout-container{
+.checkout-container {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 4rem;
 }
-
-
 
 .checkout-container-left {
   margin-left: 2rem;
@@ -987,6 +1056,7 @@ H1{
   width: 100%;
   padding: 1rem;
   border: transparent;
+  border-radius:0.5rem;
 }
 
 .checkout-container-right {
@@ -1054,44 +1124,336 @@ input[type="radio"] {
   justify-content: right;
 }
 .btn-place-order {
+ 
   border: transparent;
+  /* margin-top: 4rem; */
 }
 
 .plant-item-details {
   display: flex;
-  
+
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.btn-buy{
-  background-color:#32502e;
-  border-color:#32502e;
-  color: #fff
+.btn-buy {
+  background-color: #32502e;
+  border-color: #32502e;
+  color: #fff;
 }
 
-.btn-buy:hover{
-  background-color:#fff;
-  color:#000;
+.btn-buy:hover {
+  background-color: #fff;
+  color: #000;
   border-color: #32502e;
 }
 
-.buyThisPlantButton{
-
+.buyThisPlantButton {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   width: 10rem;
   height: 3rem;
   background-color: #32502e;
-  color:#fff;
+  color: #fff;
   margin-top: 2rem;
   border-radius: 2rem;
 }
 
-.buyThisPlantButton:hover{
+.buyThisPlantButton:hover {
+  background-color: #fff;
+  color: #32502e;
+  border: 1px solid #32502e;
+  font-weight: bold;
+}
+
+
+/* ************MODAL CHECKOUT CART************** */
+.form-group{
+  padding-top: 0.75rem;
+  padding-left:1rem;
+  padding-right:1rem;
+ 
+}
+
+.modal-title{
+  padding-left: 2rem;
+}
+
+.backToCartBtn{
+  background-color:#32502e;
+  border-color:#32502e;
+  /* display:flex;
+  align-items:center;
+  justify-content:center; */
+  color: #fff;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  width: 10rem;
+  height: 3rem;
+
+}
+
+.backToCartBtn:hover{
   background-color:#fff;
   color:#32502e;
   border: 1px solid #32502e;
   font-weight: bold;
 }
+
+#addressCheckout{
+  width: 100%;
+}
+
+#address{
+  margin-bottom: 2rem;
+}
+
+#grandTotal, #gradTotalLabel{
+  padding-top: 1rem;
+}
+
+@media (max-width: 800px){
+  .checkout-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+   
+ 
+  }
+
+.wrap{
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+
+
+ .checkout-container-left, .checkout-container-right{
+  width: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  
+ 
+ }
+
+ .modal-content{
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+ }
+
+ .subCardDiv .plantQty{
+  width:40%;
+
+  /* padding-left: 1rem; */
+  font-size: .75rem;
+  transform:translateY(-.5rem);
+
+
+}
+
+.cartImage{
+  width:80%;
+}
+
+.cartPlantName{
+ width: 100%;
+ font-size: .75rem;
+ padding-left: .75rem;
+}
+
+/* .plant-item-details{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+} */
+
+.cartIconNav{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  /* display:none; */
+}
+
+#cardpaypal{
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+#paypalContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width:30%; */
+}
+.detailsDiv p{
+  font-size: 1rem;
+}
+
+.iconHeart{
+  display:none;
+}
+
+#imageCard{
+  height:12rem;
+}
+.modal-content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plantQty{
+  border: none;
+}
+}
+
+
+@media (max-width: 1199px){
+  .iconHeart{
+    display:none;
+  }
+}
+
+#paypal{
+ 
+  padding-top: 1rem;
+ padding-left:1rem;
+ padding-right:1rem;
+ width:100%;
+ 
+}
+
+#paypalContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width:30%; */
+}
+
+#cardpaypal{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  width:40rem;
+}
+
+#amountInput{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:3rem;
+  font-size: 2rem;
+ 
+  /* width:5rem */
+ 
+  /* padding-left: 45%; */
+  /* margin-top: 1rem;
+  margin-left:1rem;
+  margin-right:1rem;
+  ;
+  
+ ;
+   */
+}
+
+#amount{
+  border:none;
+  width:6rem;
+}
+.customerInfo{
+  margin-top: 1rem;
+ margin-left:1rem;
+ margin-right:1rem;
+}
+
+.paymenth2{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+
+}
+
+.amountToPay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#success{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.successButton {
+ 
+  margin-top:5rem;
+  background-color: #32502e;
+  color: #fff;
+  border-radius: 0.3rem;
+  width: 10rem;
+  height: 3rem;
+  text-decoration: none;
+
+  /* background-color: */
+  /* color: #32502e; */
+
+}
+
+.successButton:hover{
+  background-color: #fff;
+  color: #32502e;
+}
+
+.successDiv{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmBtn{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:2rem;
+  background-color: #32502e;
+  color: #fff;
+  border-radius: 0.3rem; 
+  height: 3rem;
+  margin-bottom: 2rem;
+  margin-left:25%;
+  margin-right: 25%;
+  border:none;
+  width: 50%;
+}
+
+.confirmBtn:hover{
+  background-color: rgb(240, 246, 244);
+  color: #0d0d0d;
+  border: 1px solid #32502e;
+}
+
+.btn-prime{
+  background-color: #32502e;
+  color: #fff;
+  border-radius: 0.3rem;
+  width: 10rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+
+.btn-prime:hover{
+  background-color: rgb(240, 246, 244);
+  color: #0d0d0d;
+  border: 1px solid #32502e;
+}
+
+

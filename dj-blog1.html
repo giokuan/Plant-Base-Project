@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/blogs.css" />
+    <title>PlantBase | Blogs</title>
+  </head>
+  <body>
+    <!-- navbar starts here -->
+    <nav class="navbar fixed-top navbar-expand-lg py-4">
+      <div class="nav-container container-fluid p-0">
+        <a class="navbar-brand" href="./index.html"
+          ><img id="logo" src="./images/plantbase-logo.svg" alt=""
+        /></a>
+        <button
+          class="hamburger-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav-link-container mx-auto mb-2 mb-lg-0">
+            <li class="nav-link-items">
+              <a aria-current="page" href="./index.html">Homepage</a>
+            </li>
+            <li class="dropdown nav-link-items">
+              <a
+                class="dropdown-toggle"
+                href="./allplants.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Shop
+              </a>
+              <div class="shop-items dropdown-menu">
+                <span><a href="./allplants.html">All Plants</a></span>
+                <span><hr class="dropdown-divider" /></span>
+                <span>
+                  <a href="hangingplant.html">Hanging</a>
+                </span>
+                <span><a href="fern.html">Fern</a></span>
+                <span><a href="bromeliad.html">Bromeliad</a></span>
+                <span>
+                  <a href="cactus.html">Cactus & Succulent</a>
+                </span>
+                <span><a href="aglaonema.html">Aglaonema</a></span>
+                <span><hr class="dropdown-divider" /></span>
+                <span><a href="other.html">Other</a></span>
+                <span><a href="flower.html">Flower</a></span>
+                <span><a href="foliage.html">Foliage plant</a></span>
+                <span><a href="anthurium.html">Anthurium</a></span>
+                <span><a href="palm.html">Palm</a></span>
+                <span><hr class="dropdown-divider" /></span>
+                <span><a href="dieffenbachia.html">Dieffenbachia</a></span>
+                <span>
+                  <a href="dracaena.html">Dracaena</a>
+                </span>
+                <span>
+                  <a href="ficus.html">Ficus</a>
+                </span>
+                <span>
+                  <a href="aralia.html">Aralia</a>
+                </span>
+                <span>
+                  <a href="philodendron.html">Philodendron</a>
+                </span>
+                <span><hr class="dropdown-divider" /></span>
+                <span>
+                  <a href="grass.html">Grass</a>
+                </span>
+                <span>
+                  <a href="topiairy.html">Topiairy</a>
+                </span>
+                <span>
+                  <a href="sansevieria.html">Sansevieria</a>
+                </span>
+                <span>
+                  <a href="spathiphyllum.html">Spathiphyllum</a>
+                </span>
+                <span>
+                  <a href="schefflera.html">Schefflera</a>
+                </span>
+              </div>
+            </li>
+            <li class="nav-link-items">
+              <a href="./blogs.html">Blogs</a>
+            </li>
+            <li class="nav-link-items">
+              <a href="./faq.html">FAQs</a>
+            </li>
+            <li class="nav-link-items">
+              <a href="identifier.html">Plant Identifier</a>
+            </li>
+            <li class="nav-link-items">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+          <form class="search-form d-flex" role="search">
+            <input
+              class="search-input me-2"
+              type="search"
+              placeholder="Search"
+            />
+            <span class="search-icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+          </form>`
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+    <h2 class="text-center fs-2">Blogs</h2>
+    <!------------------------ BACK TO TOP BUTTON ----------------->
+    <!-- <button onclick="topFunction()" id="myBtn" class="back-to-top"><i class="bi bi-arrow-up-circle"></i></button>  -->
+    <i
+      onclick="topFunction()"
+      id="myBtn"
+      class="bi bi-arrow-up-circle-fill back-to-top fa-3x"
+    ></i>
+
+    <!-- main content section -->
+    <div class="blogs">
+      <div class="blogs-container">
+        <div class="blogs-container-left">
+          <div class="blogs-items">
+            <h1 class="title fs-2 fw-bold">8 Plants That Can Survive Low Light Spaces </h1>
+            <img src="./images/bg-blogs.jpg" alt="" />  
+            <p class="blog-date">Belly Michaels | July 15, 2022</p>
+            <h3 class="fw-bold mt-5">What are plants that can live in low light spaces?</h3>
+            <div class="container p-2">
+            <p class="blogs-description p-1">
+                1. Satin Pothos (Silver Satin)
+            </p>
+            <p class="blogs-description p-1">
+                2. Lucky Bamboo
+            </p>
+            <p class="blogs-description p-1">
+                3. Chinese Evergreens (Aglaonema Plants)
+            </p>
+            <p class="blogs-description p-1">
+                4. Heartleaf Philodendron
+            </p>
+            <p class="blogs-description p-1">
+                5. Bromeliads
+            </p>
+            <p class="blogs-description p-1">
+                6. Fittonias
+            </p>
+            <p class="blogs-description p-1">
+                7. Dieffenbachia Plants
+            </p>
+            <p class="blogs-description p-1">
+                8. ZZ Plants
+            </p>
+        </div>
+           <p class="blogs-description p-2">
+            If your home doesn’t get much natural light, then you might feel like you can’t add any plants to your space. But did you know that regardless of low light conditions, you can still grow lush plants indoors?
+          </p>
+          <p class="blogs-description p-2">
+            You read that right. There are plenty of plants that are tolerant — and even thrive — in places without plenty of sunlight.
+        </p>
+        <p class="blogs-description p-2">
+            So, if you’re looking for the best low-light plants that will survive even in the dimmest corners of your home, read on. We’ve compiled a list of options for you to choose from!
+        </p>
+        <h3 class="fw-bold mt-5 mb-5">
+            Satin Pothos (Silver Satin)
+        </h3>
+          <img src="./images/satin.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+            The <span style="color: green ;">Satin Pothos</span>  variety is pretty similar to other pothos plants, except its small and matte green leaves are speckled in pretty silver color — meaning this little plant will add just the right amount of flair to any space.
+          </p>
+          <p class="blogs-description pt-4">
+            This plant is an aggressive grower — especially in bright indirect light. While this means it can choke out or overpower other plants, it becomes tamer when grown indoors and in a low-light area. Plus, this plant is no-fuss, and only requires the occasional watering and pruning to keep its vines in check. This makes it perfect for beginner plant parents!
+          </p>
+
+          <h3 class="fw-bold mt-5 mb-5">
+            Lucky Bamboo
+        </h3>
+          <img src="./images/luckybamboo.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+             <span style="color: green ;">Lucky bamboo</span>plants are a popular plant gift, especially for housewarming presents. It is said to bring good luck and fortune to the home — and is well-known for being nigh-indestructible.
+          </p>
+          <p class="blogs-description pt-4">
+            Though this plant does prefer some light, it will gladly grow even in fully shaded corners of your home. These plants are small enough to fit on tabletops, and all they need is soil that’s not kept too damp, and to be away from any drafty areas of your home. So, a lucky bamboo plant is perfect for keeping on your desk, coffee table, or bookshelf.
+          </p>
+
+          <h3 class="fw-bold mt-5 mb-5">
+            Chinese Evergreens (Aglaonema Plants)
+        </h3>
+          <img src="./images/chineseevergreen.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+            The <span style="color: green ;">Chinese Evergreens</span>, also known as Aglaonema plants, are one of the most durable options that you can buy. It’s so low-maintenance that it can survive without water for three weeks at a time, and can even continue growing normally in artificial light! This means it’s perfect for secluded rooms that receive little to no sunlight in the day.
+          </p>
+          <p class="blogs-description pt-4">
+            In fact, it prefers to be kept in low light conditions, as exposure to direct sunlight can quickly scorch its delicate oval leaves. We recommend keeping them in the shade as much as possible.
+          </p>
+
+          <h3 class="fw-bold mt-5 mb-5">
+            Heartleaf Philodendron
+        </h3>
+          <img src="./images/heartleaf.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+            Also known as the sweetheart plant thanks to the adorable shape of its leaves, this plant can handle dim rooms like a champ. It prefers medium-light conditions but grows just fine in low-light areas.          </p>
+          <p class="blogs-description pt-4">
+            The only thing you need to consider when caring for the <span style="color: green ;"></span>>heartleaf philodendron</span>
+            is that it likes to be kept dry in between waterings. And, it has a trailing habit, but these vines can easily be trained to grow around posts or “totems” to keep cleaner-looking foliage.
+        </p>
+
+        <h3 class="fw-bold mt-5 mb-5">
+            Bromeliads
+        </h3>
+          <img src="./images/bromelaids.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+            Though they are considered tropical plants, you’ll be surprised to find out that bromeliads can survive without much sunlight! They can, in fact, survive on artificial light alone, if needed.          </p>
+          <p class="blogs-description pt-4">
+            Even if this plant has large and brightly colored leaves, <span style="color: green ;"> Bromeliads</span>
+            prefer staying in shady, cool areas. They can keep their vivid colors even without direct sun. The one thing they do need to thrive in your home is lots of humidity, so you can stick this plant in your bathroom or kitchen!
+        </p>
+
+          <h3 class="fw-bold mt-5 mb-5">
+            Fittonias
+        </h3>
+          <img src="./images/fittonias.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+            Better known as nerve plants or mosaic plants,<span style="color: green ;">Fittonias </span>
+            do prefer brighter light. But, this plant is extremely forgiving of neglect, so it can take low-light conditions well. And, like bromeliads, they love humidity — so stick a few of these plants by your bathroom counter!
+          </p>
+          <p class="blogs-description pt-4">
+            One thing to note is that more vibrant varieties, like our Red fittonia variety, can end up looking less brightly colored when kept too long in sunless areas. So, we do recommend moving them occasionally to receive some indirect or filtered light.
+          </p>
+
+          <h3 class="fw-bold mt-5 mb-5">
+            Dieffenbachia Plants
+        </h3>
+          <img src="./images/dieffenbanchia.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+            Dieffenbachia plants, like our<span style="color: green ;">Dieffenbachia Oerstedii</span> and <span style="color: green ;">Marian Dieffenbachia</span>
+            , prefer to be in places with filtered light. When exposed to too much sunlight, it can cause the plant to wilt — and even become burnt. They can tolerate dimmer rooms, though the Marian Dieffenbachia plant will grow a bit slower than usual because of its variegated leaves.
+          </p>
+          <p class="blogs-description pt-4">
+            Be extra careful of keeping these plants in a shaded room when it is producing new leaves, as these are especially sensitive to light.
+        </p>
+
+          <h3 class="fw-bold mt-5 mb-5">
+            ZZ Plants
+        </h3>
+          <img src="./images/heartleaf.jpg" alt=""/>
+          <p class="blogs-description pt-4">
+            Another plant that we consider nigh indestructible — and perfect for beginner plant parents to start with — is
+            <span style="color: green ;"> the ZZ plant</span> . It’s very low-maintenance and tolerant of most things, including a lack of natural sunlight. So, you can technically stick this plant in any low light corner in your home, and it will survive with little care!   
+            </p>      
+            <p class="blogs-description pt-4">
+                Even the most hands-off plant parents can keep this plant alive and growing well, as long as it is watered occasionally and kept in a dry environment. It’s the perfect choice for a windowless office or the dark corners of your kitchen and living room.
+            </p>
+          </div>
+
+        </div>
+        <div class="blogs-container-right">
+          <div class="blog-ads">
+            <div class="blogs-ads-wrapper">
+              <p class="fs-2">Look what you need for</p>
+              <p class="blogs-description">
+                Check our plants based on what you need. We got a variety of
+                ornamental plants just for you!
+              </p>
+              <a class="link-button" href="./allplants.html">SHOP NOW</a>
+            </div>
+          </div>
+          <p class="recent-post fs-2">Recent Posts</p>
+          <div class="blogs-other-topics">
+            <a href="#blogs">
+              <div class="blogs-other-topics-item">
+                <img src="./images/bg2.jpg" alt="" />
+                <div>
+                  <p class="blogs-other-topics-title">
+                    6 Best Plants For Your Office
+                  </p>
+                  <p class="blog-date" style="color: #32502e;">July 18, 2022</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blogs-other-topics">
+            <a href="#blogs">
+              <div class="blogs-other-topics-item">
+                <img src="./images/bg3.jpg" alt="" />
+                <div>
+                  <p class="blogs-other-topics-title">
+                    5 Super Easy Indoor Plants For Totally Beginners
+                  </p>
+                  <p class="blog-date" style="color: #32502e;">July 18, 2022</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blogs-other-topics">
+            <a href="#blogs">
+              <div class="blogs-other-topics-item">
+                <img src="./images/bg4.jpg" alt="" />
+                <div>
+                  <p class="blogs-other-topics-title">
+                    6 PLANTS THAT INDUCE SLEEP
+                  </p>
+                  <p class="blog-date" style="color: #32502e;">July 18, 2022</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blogs-other-topics">
+            <a href="#blogs">
+              <div class="blogs-other-topics-item">
+                <img src="./images/bg5.jpg" alt="" />
+                <div>
+                  <p class="blogs-other-topics-title">
+                   Best Bedroom Plants
+                  </p>
+                  <p class="blog-date" style="color: #32502e;">July 18, 2022</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blogs-other-topics">
+            <a href="#blogs">
+              <div class="blogs-other-topics-item">
+                <img src="./images/bg6.jpg" alt="" />
+                <div>
+                  <p class="blogs-other-topics-title">
+                    4 EASY FLOWERS FOR BEGINNERS TO GROW
+                  </p>
+                  <p class="blog-date" style="color: #32502e;">July 18, 2022</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blogs-other-topics">
+            <a href="#blogs">
+              <div class="blogs-other-topics-item">
+                <img src="./images/bg7.jpeg" alt="" />
+                <div>
+                  <p class="blogs-other-topics-title">
+                    4 Best Low-Maintenance Flowers
+                  </p>
+                  <p class="blog-date" style="color: #32502e;">July 18, 2022</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blogs-other-topics">
+            <a href="#blogs">
+              <div class="blogs-other-topics-item">
+                <img src="./images/bg8.jpg" alt="" />
+                <div>
+                  <p class="blogs-other-topics-title">
+                    4 Colorful Plants to Brighten Up Your Landscape
+                  </p>
+                  <p class="blog-date" style="color: #32502e;">July 18, 2022</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- newsletter section -->
+    <div class="newsletter">
+      <div class="newsletter-container">
+        <div class="get-the-dirt-section">
+          <p class="newsletter-title fs-2">Get The Dirt!</p>
+          <p>Sign up and be the first to know of our newest collections.</p>
+        </div>
+        <form action="#" id="newsletter">
+          <input
+            class="newsletter-input"
+            for="newsletter"
+            type="email"
+            placeholder="Enter Your Email"
+          />
+          <button class="newsletter-btn link-button" type="submit">
+            SIGN UP
+          </button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo-container">
+          <a href="#"
+            ><img id="logo" src="./images/plantbase-logo.svg" alt=""
+          /></a>
+        </div>
+        <div class="footer-content-container">
+          <div class="about-us-col">
+            <p class="about-us-description">
+              PlantBase offers a wide variety of ornamental plants that are great for adding flavor to your indoor or outdoor design taste. 
+              If you are looking for a fresh and affordable plants, this is the perfect place for you. 
+              We started as a small business and hobby and as time flies, we decided to make it through online platform.
+            </p>
+          </div>
+          <div class="address-telephone-col">
+            <ul>
+              <li class="footer-content-label">ADDRESS:</li>
+              <li>ABC St, Brgy. Kamote,</li>
+              <li>Surigao City</li>
+              <li>Philippines 8400</li>
+            </ul>
+            <ul>
+              <li class="footer-content-label">TELEPHONE:</li>
+              <li>0912-345-6789</li>
+            </ul>
+          </div>
+          <div class="useful-links-col">
+            <ul>
+              <li class="footer-content-label">USEFUL LINKS</li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="#">Checkout</a></li>
+            </ul>
+          </div>
+          <div class="social-media-col">
+            <p class="footer-content-label">SOCIAL MEDIA LINKS</p>
+            <div class="footer-social-media-icons">
+              <span
+                ><a href="#"><i class="fa-brands fa-facebook"></i></a
+              ></span>
+              <span
+                ><a href="#"><i class="fa-brands fa-instagram"></i></a
+              ></span>
+              <span
+                ><a href="#"><i class="fa-brands fa-twitter"></i></a
+              ></span>
+              <span
+                ><a href="#"><i class="fa-brands fa-pinterest"></i></a
+              ></span>
+            </div>
+            <div class="accredited-payments">
+              <p class="footer-content-label">ACCREDITED PAYMENT OPTIONS</p>
+              <div class="accredited-payments-logo">
+                <img src="./images/GCah_2019.webp" alt="" />
+                <img src="./images/mastercard.png" alt="" />
+                <img src="./images/visa.png" alt="" />
+                <img
+                  src="./images/COD_cash_on_delivery_shipping_payment_delivery-512.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">Copyright &copy; 2022 | All Rights Reserved</p>
+    </footer>
+    <script src="./js/plants.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

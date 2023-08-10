@@ -2,7 +2,7 @@
 
 * {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -78,7 +78,7 @@
 .shop-items {
   padding: 1rem;
   margin-top: 2rem;
-  width: 20vw;
+  width: 30vw;
 }
 
 .shop-items span {
@@ -86,21 +86,16 @@
 }
 
 .shop-items span a {
-  opacity: 0.5;
   transition: cubic-bezier(1, 0, 0, 1) 0.3s;
+  display: block;
+  width: 100%;
+  margin: 0.3rem 0;
 }
 
 .shop-items span a:hover,
 .shop-items span a:focus,
 .shop-items span a:active {
-  color: #32502e;
-  opacity: 1;
-}
-/* carousel section */
-.carousel-inner img {
-  width: 100%;
-  height: 85vh;
-  object-fit: cover;
+  background-color: #32502e3c;
 }
 
 /* about us section */
@@ -136,6 +131,10 @@ h2 {
 }
 
 /* blogs section */
+.blogs-header {
+  margin-top: 10rem;
+}
+
 .blogs-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -546,9 +545,10 @@ img .card-img-top {
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 6rem;
+  right: 2rem;
   z-index: 996;
+  font-size: 4rem;
   /* font-size: 2rem;  */
   /* padding:.75rem; */
   /* border: 1px solid rgb(227, 79,38); */

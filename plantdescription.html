@@ -26,7 +26,7 @@
   </head>
   <body>
     <!-- navbar starts here -->
-    <nav class="navbar navbar-expand-lg py-4">
+<nav class="navbar fixed-top navbar-expand-lg py-4 bg-light">
       <div class="nav-container container-fluid p-0">
         <a class="navbar-brand" href="./index.html"
           ><img id="logo" src="./images/plantbase-logo.svg" alt=""
@@ -58,66 +58,81 @@
                 Shop
               </a>
               <div class="shop-items dropdown-menu">
-                <span><a href="allplants.html">All Plants</a></span>
-                <span><hr class="dropdown-divider" /></span>
-                <span>
-                  <a href="hangingplant.html">Hanging</a>
-                </span>
-                <span><a href="fern.html">Fern</a></span>
-                <span><a href="bromeliad.html">Bromeliad</a></span>
-                <span>
-                  <a href="cactus.html">Cactus & Succulent</a>
-                </span>
-                <span><a href="aglaonema.html">Aglaonema</a></span>
-                <span><hr class="dropdown-divider" /></span>
-                <span><a href="other.html">Other</a></span>
-                <span><a href="flower.html">Flower</a></span>
-                <span><a href="foliage.html">Foliage plant</a></span>
-                <span><a href="anthurium.html">Anthurium</a></span>
-                <span><a href="palm.html">Palm</a></span>
-                <span><hr class="dropdown-divider" /></span>
-                <span><a href="dieffenbachia.html">Dieffenbachia</a></span>
-                <span>
-                  <a href="dracaena.html">Dracaena</a>
-                </span>
-                <span>
-                  <a href="ficus.html">Ficus</a>
-                </span>
-                <span>
-                  <a href="aralia.html">Aralia</a>
-                </span>
-                <span>
-                  <a href="philodendron.html">Philodendron</a>
-                </span>
-                <span><hr class="dropdown-divider" /></span>
-                <span>
-                  <a href="grass.html">Grass</a>
-                </span>
-                <span>
-                  <a href="topiairy.html">Topiairy</a>
-                </span>
-                <span>
-                  <a href="sansevieria.html">Sansevieria</a>
-                </span>
-                <span>
-                  <a href="spathiphyllum.html">Spathiphyllum</a>
-                </span>
-                <span>
-                  <a href="schefflera.html">Schefflera</a>
-                </span>
+                <div class="row">
+                  <div class="col-6">
+                    <span><a href="./allplants.html">All Plants</a></span>
+                    <span>
+                      <a href="./hangingplant.html">Hanging</a>
+                    </span>
+                    <span><a href="./fern.html">Fern</a></span>
+                    <span><a href="./bromeliad.html">Bromeliad</a></span>
+                    <span>
+                      <a href="./cactus.html">Cactus & Succulent</a>
+                    </span>
+                    <span><a href="./aglaonema.html">Aglaonema</a></span>
+                    <span><a href="./other.html">Other</a></span>
+                    <span><a href="./flower.html">Flower</a></span>
+                    <span><a href="./foliage.html">Foliage plant</a></span>
+                    <span><a href="./anthurium.html">Anthurium</a></span>
+                  </div>
+                  <div class="col-6">
+                    <span><a href="./palm.html">Palm</a></span>
+                    <span
+                      ><a href="./dieffenbachia.html">Dieffenbachia</a></span
+                    >
+                    <span>
+                      <a href="./dracaena.html">Dracaena</a>
+                    </span>
+                    <span>
+                      <a href="./ficus.html">Ficus</a>
+                    </span>
+                    <span>
+                      <a href="./aralia.html">Aralia</a>
+                    </span>
+                    <span>
+                      <a href="./philodendron.html">Philodendron</a>
+                    </span>
+                    <span>
+                      <a href="./grass.html">Grass</a>
+                    </span>
+                    <span>
+                      <a href="./topiairy.html">Topiairy</a>
+                    </span>
+                    <span>
+                      <a href="./sansevieria.html">Sansevieria</a>
+                    </span>
+                    <span>
+                      <a href="./spathiphyllum.html">Spathiphyllum</a>
+                    </span>
+                    <span>
+                      <a href="./schefflera.html">Schefflera</a>
+                    </span>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="nav-link-items">
-              <a href="#">Blogs</a>
+              <a href="./blogs.html">Blogs</a>
             </li>
             <li class="nav-link-items">
-              <a href="#">FAQs</a>
+              <a href="./faq.html">FAQs</a>
             </li>
             <li class="nav-link-items">
               <a href="identifier.html">Plant Identifier</a>
             </li>
             <li class="nav-link-items">
-              <a href="#">Contact Us</a>
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li class="nav-link-items">
+              <span
+                ><i
+                  class="bi bi-cart fa-lg cartIconNav"
+                  data-bs-target="#cartModal"
+                  data-bs-toggle="modal"
+                  type="button"
+                ></i
+                >Cart
+              </span>
             </li>
           </ul>
           <form class="search-form d-flex" role="search">
@@ -130,15 +145,6 @@
               ><i class="fa-solid fa-magnifying-glass"></i
             ></span>
           </form>
-          <ul class="nav-sign-in mb-2 mb-lg-0">
-            <li>
-              <a href="#">Login</a>
-            </li>
-            <span>/</span>
-            <li>
-              <a href="#">Sign Up</a>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
@@ -205,13 +211,13 @@
           <div class="useful-links-col">
             <ul>
               <li class="footer-content-label">USEFUL LINKS</li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Cart</a></li>
-              <li><a href="#">Checkout</a></li>
+              <li><a href="./allplants.html">All Plants</a></li>
+              <li><a href="./blogs.html">Blogs</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./faq.html">FAQs</a></li>
+              <li><a href="./my-account.html">My Account</a></li>
+              <li><a href="./cart.html">Cart</a></li>
+              <li><a href="./checkout.html">Checkout</a></li>
             </ul>
           </div>
           <div class="social-media-col">
